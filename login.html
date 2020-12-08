@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript">
+        function validate()
+        {
+            var user=document.getElementById('username').value;
+            var pass=document.getElementById('password').value;
+            if(user!=="admin")
+            {               
+               document.getElementById("div1").innerHTML="Enter a correct username";
+               document.getElementById("div1").style.display="block";
+               document.getElementById("div2").style.display="none";
+            }
+            else if(pass!=="admin")
+            {
+                document.getElementById("div1").style.display="none";
+                document.getElementById("div2").innerHTML="Enter a correct username";
+                document.getElementById("div2").style.display="block";
+            }
+            else
+            {
+                window.location.href='index.html';
+
+            }
+            
+           
+            
+                //window.alert("Username or Password Incorrect");
+        }
+        </script>
+</head>
+<body id="login">
+<section>
+    <div class="login-area">
+        <img src="images/logo.jpg">
+        <form method="post">
+            <input type="text" id="username" value="" placeholder="Username" required>
+            <div id="div1"></div>
+            <input type="password" id="password" value="" placeholder="Password" required>
+            <div id="div2"></div>
+            <input type="button" value="Login" onclick="validate()" class="btn">
+            <a href="#">Forgot Username/Password</a>
+            
+        </form>
+    </div>
+</section>
+
+
+</body>
+</html>
